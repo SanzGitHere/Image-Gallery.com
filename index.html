@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories Gallery</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>GADGETS GALLERY</h1>
+        <div class="top-content">
+            <label data-category="all" class="selected" onclick="filterImages(this)">All Accessories</label>
+            <label data-category="Smartphones" onclick="filterImages(this)">Smartphones</label>
+            <label data-category="Smartwatches" onclick="filterImages(this)">Smartwatches</label>
+            <label data-category="Laptops" onclick="filterImages(this)">Laptops</label>
+            <label data-category="Earbuds" onclick="filterImages(this)">Earbuds</label>
+            <label data-category="Speakers" onclick="filterImages(this)">Speakers</label>
+        </div>
+
+        <div class="photo-gallery" id="photoGallery">
+            <div class="Smartphones">
+                <img src="Images/Smartphones/Apple-iPhone-15-Pro-Max.jpg" alt="Smartphone">
+            </div>
+            <div class="Smartwatches">
+                <img src="Images/Smartwatches/D20-1.jpg" alt="Smartwatch">
+            </div>
+            <div class="Laptops">
+                <img src="Images/Laptops/ASUS.png" alt="Laptop">
+            </div>
+            <div class="Earbuds">
+                <img src="Images/Earbuds/airpods.jpg" alt="Earbuds">
+            </div>
+            <div class="Speakers">
+                <img src="Images/Speakers/home.jpg" alt="Speaker">
+            </div>
+
+
+            <div class="Smartphones">
+                <img src="Images/Smartphones/galaxy-z-fold5-highlights-sustainability-mo.jpg" alt="Smartphone">
+            </div>
+            <div class="Smartwatches">
+                <img src="Images/Smartwatches/HW-67.jpg" alt="Smartwatch">
+            </div>
+            <div class="Laptops">
+                <img src="Images/Laptops/Dell.jpg" alt="Laptop">
+            </div>
+            <div class="Earbuds">
+                <img src="Images/Earbuds/anker.jpg" alt="Earbuds">
+            </div>
+            <div class="Speakers">
+                <img src="Images/Speakers/JBL.jfif" alt="Speaker">
+            </div>
+
+
+            <div class="Smartphones">
+                <img src="Images/Smartphones/Samsung-Galaxy-S24-Ultra-3.jpg" alt="Smartphone">
+            </div>
+            <div class="Smartwatches">
+                <img src="Images/Smartwatches/mini.jpg" alt="Smartwatch">
+            </div>
+            <div class="Laptops">
+                <img src="Images/Laptops/HP.png" alt="Laptop">
+            </div>
+            <div class="Earbuds">
+                <img src="Images/Earbuds/JBL.jpg" alt="Earbuds">
+            </div>
+            <div class="Speakers">
+                <img src="Images/Speakers/SONY.jpg" alt="Speaker">
+            </div>
+
+
+            <div class="Smartphones">
+                <img src="Images/Smartphones/Xiaomi Redmi Note 12 4G-500x500.jpg" alt="Smartphone">
+            </div>
+            <div class="Smartwatches">
+                <img src="Images/Smartwatches/pixel.png" alt="Smartwatch">
+            </div>
+            <div class="Laptops">
+                <img src="Images/Laptops/MAC.jpg" alt="Laptop">
+            </div>
+            <div class="Earbuds">
+                <img src="Images/Earbuds/Lenovo.jfif" alt="Earbuds">
+            </div>
+            <div class="Speakers">
+                <img src="Images/Speakers/Subwoofer.jpg" alt="Speaker">
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function filterImages(label) {
+            // Update selected tab style
+            const labels = document.querySelectorAll('.top-content label');
+            labels.forEach(el => el.classList.remove('selected'));
+            label.classList.add('selected');
+
+            // Get the selected category
+            const category = label.getAttribute('data-category');
+            const galleryItems = document.querySelectorAll('.photo-gallery div');
+
+            // Filter images based on the selected category
+            galleryItems.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
