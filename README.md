@@ -1,1 +1,1 @@
-# Image-Gallery.com
+# Image-Gallery
